@@ -58,8 +58,8 @@ function Login() {
   const form = useForm<FormFields>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "samfrostz",
-      password: "samfrost@20",
+      username: "akash-maurya",
+      password: "thisisME",
     },
   });
 
