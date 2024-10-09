@@ -12,7 +12,7 @@ function UserInfo() {
   return (
     <div className="flex items-center justify-start gap-2 border rounded-[8px] border-gray-300 p-2">
         <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage src="/149809.png" />
             <AvatarFallback>DP</AvatarFallback>
         </Avatar>
         <div className="flex flex-col justify-center">

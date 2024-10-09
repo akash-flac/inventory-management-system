@@ -36,18 +36,18 @@ function EmployeeProfile() {
           {option === " " ? (
             <div className="flex flex-row items-center mb-8">
               <Avatar className="h-24 w-24 mr-4">
-                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarImage src="/149809.png" />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
               <div>
-                <p className="font-medium text-xl">Samarth Negi</p>
+                <p className="font-medium text-xl">Saumya Chaturvedi</p>
                 <div className="flex flex-row items-center py-1">
                   <Phone size={18} />{" "}
-                  <p className="font-normal text-md pl-2">9717433825</p>
+                  <p className="font-normal text-md pl-2">9876543210</p>
                 </div>
                 <div className="flex flex-row items-center">
                   <Briefcase size={18} />{" "}
-                  <p className="font-normal text-md pl-2">Junior Dev</p>
+                  <p className="font-normal text-md pl-2">Team Lead</p>
                 </div>
               </div>
             </div>
