@@ -27,7 +27,7 @@ export function isAdminModel(obj: any): obj is adminModel {
 }
 
 export async function readAdmin(username: string, password: string): Promise<DatabaseResponse<adminModel>> {
-    console.log("Startind database reading admin process")
+    console.log("Starting database reading admin process")
     try {
         const response = await prisma.admin.findUnique({
             where: {
@@ -35,7 +35,7 @@ export async function readAdmin(username: string, password: string): Promise<Dat
                 password
             }
         });
-    console.log("Admin  read from database and being returned!")
+    console.log("Admin read from database and being returned!")
 
         // If  user is found
         if (response) {
@@ -53,12 +53,12 @@ export async function readAdmin(username: string, password: string): Promise<Dat
         
     } catch (error) {
 
-    console.log("Error occuerds in  reading admin from the database. NOW PRITING ERROR")
+    console.log("Error occurred in  reading admin from the database. NOW PRINTING ERROR")
     console.log(error)
 
         return {
             code: HttpStatus.INTERNAL_SERVER_ERROR,
-            data: {message: "Error occured while trying to read data!"}
+            data: {message: "Error occurred while trying to read data!"}
         };
     }
 }
@@ -108,7 +108,7 @@ export async function createAdmin(username: string, password: string, location: 
     } catch (error) {
         return {
             code: 500,
-            data: "Error occured while trying to read data!"
+            data: "Error occurred while trying to read data!"
         };
     }
 }
@@ -131,7 +131,7 @@ export async function getAdminRefreshToken(id: number) {
     } catch (error) {
         return {
             code: 500,
-            data: "Error occured while trying to read data!"
+            data: "Error occurred while trying to read data!"
         };
     }
 }
@@ -154,7 +154,7 @@ export async function updateAdminRefreshToken(id: number, refreshToken: string,)
     } catch (error) {
         return {
             code: 500,
-            data: "Error occured while trying to read data!"
+            data: "Error occurred while trying to read data!"
         };
     }
 }
