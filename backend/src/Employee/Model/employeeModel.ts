@@ -28,7 +28,6 @@ export async function addEmployee(name: string, phoneNumber: string, position: s
     }
 }
 
-
 // TODO - Modify this function to also "return all the items assigned to the employee"
 export async function readEmployee(empId: number) {
 

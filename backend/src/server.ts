@@ -52,30 +52,7 @@ app.use('/assignedItem', authMiddleware, assignedItemRouter);
 
 // app.get('/', authMiddleware,  function (req: Request, res: Response) {
 app.get('/', function (req: Request, res: Response) {
-    // const token: string = generateAccessToken({id: 1,
-    //     username: "sam", 
-    //     location: "gugaon",
-    //     name: "samrto"
-    // })
-
-    // const token = req.headers.authorization?.split(' ')[1]; // Extract token from authorization header
-
-    // if (!token) {
-    //     return res.status(401).send('Unauthorized'); // Handle missing token
-    // }
-    // const response: boolean = isTokenSignatureValid(token)
-    // const tokenData = decodeToken(token)
-    // console.log("Printing decoded token data")
-    // console.log(tokenData)
-    // res.json({ response });
-    // res.json({token})
-    // asda asdas s asdasd 
-    // UPDATED CODE BRUH TRIGERING NOW FROM THE GITGHUB
-
     res.json({msg: "All good"});
-
-    
-
 }
 )
 
@@ -92,4 +69,4 @@ app.get('/delete', async function (req: Request, res: Response) {
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 })
-// 
+

@@ -13,7 +13,6 @@ import {
     UsersRound,
     Plus,
     GanttChart,
-    
   } from "lucide-react";
 
 import { Inventory } from "./pages/Inventory/InventoryTypes";

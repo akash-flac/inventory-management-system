@@ -6,7 +6,7 @@ interface EmployeeAccessTokenPayload {
     userId: string;
     username: string;
     // Add other user data as needed
-}
+} 
 
 export interface AdminAccessTokenPayload {
     id: number,

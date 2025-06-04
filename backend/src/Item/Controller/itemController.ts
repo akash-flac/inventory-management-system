@@ -143,7 +143,7 @@ export async function assignItems(req: Request, res: Response) {
 
         
     }
-
+    
     // let operationSuccessful = true;
 
     // Check if all the assignemnets operations were sucess!

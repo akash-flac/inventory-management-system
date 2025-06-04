@@ -19,30 +19,4 @@ export async function checkItemQuantities(dbData: { empId: number; itemId: numbe
     }
   }
 
-/*
-dbData.forEach(async (row) => {
-
-            const response = await prisma.item.findUnique({
-                select: {
-                    quantity: true
-                },
-                where: {
-                    itemId: row.itemId
-                }
-            });
-
-            if (response) {
-                const itemQuantity: number = response?.quantity;
-                // The quantity trying to be assigned is more than the exisiting quantity
-                if (row.quantity > itemQuantity) {
-                    throw new Error;
-                }
-            }
-
-            console.log("forEach response printing");
-            console.log(response);
-
-
-        })
-
-*/
+  

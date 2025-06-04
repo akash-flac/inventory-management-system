@@ -8,6 +8,5 @@ router.post('/login', adminLogin);
 router.post('/register', adminRegister);
 router.get('/isAuthenticated', authMiddleware, userAuthenticated);
 router.get('/logout', userLogout);
-// router.get('/refreshAccessToken', refreshAccessToken);
 
 export default router; 

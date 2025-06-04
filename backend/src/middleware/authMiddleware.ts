@@ -107,25 +107,25 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
 };
 
 
-async function refreshAccessToken(incommingAccessToken: string, incommingRefreshToken: string) {
+async function refreshAccessToken(incomingAccessToken: string, incomingRefreshToken: string) {
 
     console.log("Refreshing access tooken!!")
     // Decode the tokens
-    const decodedIncommingAccessToken: Payload | null = decodeToken(incommingAccessToken)
-    const decodedIncommingRefreshToken: Payload | null = decodeToken(incommingRefreshToken)
+    const decodedIncomingAccessToken: Payload | null = decodeToken(incomingAccessToken)
+    const decodedIncomingRefreshToken: Payload | null = decodeToken(incomingRefreshToken)
 
-    if (decodedIncommingAccessToken && decodedIncommingRefreshToken) {
-        if (decodedIncommingAccessToken) {
-            delete decodedIncommingAccessToken.iat
-            delete decodedIncommingAccessToken.exp
+    if (decodedIncomingAccessToken && decodedIncomingRefreshToken) {
+        if (decodedIncomingAccessToken) {
+            delete decodedIncomingAccessToken.iat
+            delete decodedIncomingAccessToken.exp
         }
 
-        if (decodedIncommingRefreshToken) {
-            delete decodedIncommingRefreshToken.iat
-            delete decodedIncommingRefreshToken.exp
+        if (decodedIncomingRefreshToken) {
+            delete decodedIncomingRefreshToken.iat
+            delete decodedIncomingRefreshToken.exp
         }
 
-        const adminId: number = decodedIncommingRefreshToken.id
+        const adminId: number = decodedIncomingRefreshToken.id
         // Check if refresh token matches
         const response = await getAdminRefreshToken(adminId)
         if (!(typeof response.data === 'string') && response.data) {
@@ -134,12 +134,12 @@ async function refreshAccessToken(incommingAccessToken: string, incommingRefresh
                 oldRefreshToken = response.data.refreshToken
             }
 
-            // User is verified, send new tokess
-            if (oldRefreshToken === incommingRefreshToken) {
+            // User is verified, send new tokens
+            if (oldRefreshToken === incomingRefreshToken) {
 
                 // Save the new refresh token
-                const newAccessToken: string = generateAccessToken(decodedIncommingAccessToken as AdminAccessTokenPayload)
-                const newRefreshToken: string = generateRefreshToken(decodedIncommingRefreshToken as AdminRefreshTokenPayload)
+                const newAccessToken: string = generateAccessToken(decodedIncomingAccessToken as AdminAccessTokenPayload)
+                const newRefreshToken: string = generateRefreshToken(decodedIncomingRefreshToken as AdminRefreshTokenPayload)
 
                 updateAdminRefreshToken(adminId, newRefreshToken)
                 console.log("Access token refreshed in mi!!!")
