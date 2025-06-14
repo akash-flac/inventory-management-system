@@ -15,7 +15,7 @@ const localStorageEffect = (key: string): AtomEffect<any> => ({ setSelf, onSet }
     });
   };
 
-  // Define the persistAtom function with appropriate types
+// Define the persistAtom function with appropriate types
 export const persistAtom = <T>(key: string, defaultValue: T): RecoilState<T> => atom<T>({
     key,
     default: defaultValue,

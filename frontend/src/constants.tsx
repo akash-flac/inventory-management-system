@@ -260,21 +260,21 @@ export const menuList = [
         },
       ],
     },
-    {
-      group: "Settings",
-      items: [
-        {
-          link: "/admin/settings/general",
-          icon: <Settings />,
-          text: "General Settings",
-        },
-        {
-          link: "/admin/settings/profile",
-          icon: <CircleUserRound />,
-          text: "Profile",
-        },
-      ],
-    },
+    // {
+    //   group: "Settings",
+    //   items: [
+    //     {
+    //       link: "/admin/settings/general",
+    //       icon: <Settings />,
+    //       text: "General Settings",
+    //     },
+    //     {
+    //       link: "/admin/settings/profile",
+    //       icon: <CircleUserRound />,
+    //       text: "Profile",
+    //     },
+    //   ],
+    // },
   ];
 
   export const data: Inventory[] = [

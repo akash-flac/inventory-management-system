@@ -8,10 +8,5 @@ interface AdminInfo {
   name: string
 }
 
-// export const adminInfoState = atom<AdminInfo | null>({
-//     key: 'adminInfoState', // unique ID (with respect to other atoms/selectors)
-//     default: null, // default value (aka initial value)  
-//   });
-
 
 export const adminInfoState = persistAtom<AdminInfo | null>('adminInfoState', null)
